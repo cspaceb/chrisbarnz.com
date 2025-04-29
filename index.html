@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chris Barnz</title>
+  <title>CB</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script>
+    if (location.protocol !== 'https:') {
+      location.href = 'https://' + location.hostname + location.pathname + location.search;
+    }
+  </script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -33,7 +38,7 @@
       width: 100%;
       text-align: center;
       font-size: 14px;
-      color: #555; /* Dark grey text */
+      color: #555;
       font-family: Arial, sans-serif;
     }
   </style>
