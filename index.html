@@ -2,60 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CB</title>
+  <title>Chris Barnz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script>
-    if (location.protocol !== 'https:') {
-      location.href = 'https://' + location.hostname + location.pathname + location.search;
-    }
-  </script>
+
+  <!-- Apple-style minimal styling -->
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
+      box-sizing: border-box;
+    }
+
+    body {
       background: #000;
-      overflow: hidden;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                   "Helvetica Neue", Arial, sans-serif;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
-    img {
-      height: 90vh;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
+
+    /* Fade-in effect */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.8s ease forwards;
     }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Logo styling */
+    .logo {
+      width: 28vw;
+      max-width: 260px;
+      min-width: 160px;
+      opacity: 0.6;
+      transition: opacity .3s ease;
+    }
+
+    .logo:hover {
+      opacity: 1;
+    }
+
+    /* Navigation links */
+    nav {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    nav a {
+      color: #999;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color .25s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
     footer {
       position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      font-family: Arial, sans-serif;
+      bottom: 12px;
+      font-size: 13px;
+      color: #444;
     }
+
     footer a {
       color: #555;
       text-decoration: none;
     }
+
     footer a:hover {
-      text-decoration: underline;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="CB Logo">
-<footer>
-  © 2025 Chris Barnz · 
-  <a href="mailto:your@email.com">Contact Me</a> · 
-  <a href="/privacypolicy.html">Privacy Policy</a>
-</footer>
+
+  <!-- Logo (fade-in) -->
+  <img src="logo.png" class="logo fade-in" alt="Chris Barnz Logo">
+
+  <!-- Simple Apple-like menu -->
+  <nav class="fade-in" style="animation-delay: 0.4s;">
+    <a href="https://cfbwp.chrisbarnz.com" target="_blank">CFB Wallpaper Generator</a>
+    <a href="/privacypolicy.html">Privacy Policy</a>
+    <a href="mailto:your@email.com">Contact</a>
+  </nav>
+
+  <footer>
+    © 2025 Chris Barnz
+  </footer>
 
 </body>
 </html>
